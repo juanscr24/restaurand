@@ -14,7 +14,7 @@ const Price: FC<IPrice> = ({ id, price, options }) => {
 
     return (
         <div className='flex flex-col gap-4'>
-            <h2 className='text-2xl font-bold'>${price.toFixed(2)} - Total: ${total} </h2>
+            <h2 className='text-2xl font-bold'>${total.toFixed(2)}</h2>
             <div className='flex gap-4'>{options?.map((option, index) => (
                 <button key={option.title} className={`min-w-[6rem] p-2 ring-1 ring-red-400 rounded-md bg-${selected === index ? 'red-500' : 'white'} text-${selected === index ? 'white' : 'red-500'}`} onClick={() => setSelect(index)}>{option.title}</button>
             ))}
